@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .div1 {
+        display: inline-block;
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        background-image: linear-gradient(45deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);
+    }
+
+    .div2 {
+        display: inline-block;
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
+        
+    }
+</style>
+
+<body>
+
+
+    <div class="div1"></div>
+
+    <div class="div2"></div>
+    <br>
+
+
+
+
+
+
+
+    <script>
+
+
+        for (var i = 1; i <= 9; i++) {
+            for (var o = 1; o <= i; o++) {
+                document.write(o + '*' + i + '=' + o * i + " &nbsp; &nbsp;");
+            }
+            document.write('<br>');
+        }
+    </script>
+</body>
+
+</html>

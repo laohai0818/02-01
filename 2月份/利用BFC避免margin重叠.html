@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>利用BFC避免margin重叠</title>
+    <style>
+    .box1{
+        border: 5px solid red;
+        overflow: hidden;
+    }
+    p{
+        margin: 20px;
+    }
+    .p1{
+        height: 16px;
+        background-color: aqua;               
+    }
+    .p2{
+        height: 16px;
+        background-color: blueviolet;
+    }
+    .box2{
+        overflow: hidden;
+    }
+    .float1{
+        width: 100px;
+        height: 100px;
+        background-color: blue;
+        float: left;
+    }
+    </style>
+</head>
+<body>
+    <div class="float1"></div>
+    <div class="box1">
+        <p class="p1">1</p>
+        <div class="box2">
+            <p class="p2">2</p>
+        </div>
+    </div>
+       
+</body>
+</html>

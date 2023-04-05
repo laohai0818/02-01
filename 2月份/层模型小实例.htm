@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>层模型小实例</title>
+    <style>
+        .img_box{
+            width: 300px;
+            height: 300px;
+            border: 1px solid red;
+            margin-top: 30px;
+            position: relative;
+        }
+        .img_item{
+            width: 300px;
+            height: 300px; 
+        }
+        .author{
+            position: absolute;
+            background-color: orange;
+            top: 10px;
+            left: 10px;
+            border-radius: 2px;
+            padding: 2px 6px;;
+            font-size: 14px;
+            font-weight: 700;
+            color: rgba(243, 241, 241, 1);
+        }
+        .lesson_num{
+            position: absolute;
+            background-color: orange;
+            top: 10px;
+            right: 10px;
+            border-radius: 2px;
+            padding: 2px 6px;
+            font-size: 14px;
+            font-weight: 700;
+        }
+        body{
+            background-image: url(./img/23456.png);
+            background-repeat: no-repeat;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="img_box">
+        <img class="img_item" src="./img/23456.png" alt="图片可能丢了...">
+        <div class="info_box">
+            <div class="author"><span>阿海</span></div>
+            <div class="lesson_num"> <span>第一课时</span> </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .parent{
+            width: 200px;
+            height: 200px;
+            background-color: aqua;
+        }
+        /* 解决父子元素相邻的垂直外边距重叠 */
+        /* .parent::before{  
+            content: "";
+            display: table;
+        } */
+        .child{
+            width:100px;
+            height: 100px;
+            background-color: bisque;
+            margin-top: 50px;
+        }
+       
+        
+
+        .box1{
+            width: 300px;
+            border: 5px solid red;
+            margin-top: 20px;
+        }
+        .box2{
+            width: 100px;
+            height: 100px;
+            background-color: aqua;
+            float: left;
+        }
+          /* 设置一个子程序，让需要解决坍塌和外边距重叠问题的直接调用这个子程序 */
+        /* 解决外边距重叠 */
+        .clearfix::after,
+        .clearfix::before{
+            content: '';
+            display: table;
+        }   
+         /* 同时解决高度坍塌 */
+        .clearfix::after{
+            clear: both;
+        }
+        
+    </style>
+</head>
+<body>
+    <!-- 
+        父子元素相邻的垂直外边距重叠，子元素的外边距会传递给父元素
+        解决：1，要么不用外边距 2，要么不让他们相邻
+        办法：1.给父元素加一个内边距（padding-top） 会影响原始大小 不推荐
+             2.伪元素 before  
+     -->
+    <div class="parent clearfix">
+        <div class="child"></div>
+    </div>
+
+    <div class="box1 clearfix">
+        <div class="box2"></div>
+    </div>
+</body>
+</html>

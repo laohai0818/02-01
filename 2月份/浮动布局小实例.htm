@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>浮动小实例</title>
+    <style>
+        body {
+            /* 给整个网页设置背景颜色 */
+            background-color: rgb(141, 193, 238);
+        }
+        /** 浏览器在解析行内块元素和行内元素的时候，如果代码换行，会产生一个空格的间距 */
+        /* 给头部设置样式 */
+        .header { 
+            width: 80%;
+            height: 70px;
+            background-color: pink;
+            margin: 0 auto; /*让这个元素在整个页面中水平居中*/
+            text-align: center; /*让内容水平居中*/
+            line-height: 70px; /*让内容垂直居中*/
+        }
+
+        .content {
+            width: 80%;
+            height: 400px;
+            margin: 10px auto;
+            text-align: center;
+            line-height: 200px;
+        }
+
+        .footer {
+            width: 80%;
+            height: 70px;
+            background-color: lemonchiffon;
+            margin: 0 auto;
+            text-align: center;
+            line-height: 100px;
+        }
+
+        .left_content {
+            width: 70%;
+            height: 100%;
+            background-color: orange;
+            float: left;
+        }
+
+        .sidebar {
+            width: 27%;
+            height: 100%;
+            background-color: aquamarine;
+            float: right; 
+            /* 单独的一个块，不在中间内容的大局域里面，左右单独设置 */
+        }
+
+        .part1 {
+            width: 30%;
+            height: 100%;
+            background-color: aqua;
+            float: left;
+            margin-right: 2.5%;
+        }
+
+        .part2 {
+            width: 35%;
+            height: 100%;
+            background-color: rgb(0, 255, 157);
+            float: left;
+        }
+
+        .part3 {
+            width: 30%;
+            height: 100%;
+            background-color: rgb(0, 110, 255);
+            float: right;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <div class="header">头部</div>
+        <div class="content">
+            <!-- 内容栏 -->
+            <div class="left_content">
+                <div class="part1">part1</div>
+                <div class="part2">part2</div>
+                <div class="part3">part3</div>
+            </div>
+            <!-- 侧边栏 -->
+            <div class="sidebar">侧边</div>
+        </div>
+        <div class="footer">底部</div>
+    </div>
+
+</body>
+
+</html>
